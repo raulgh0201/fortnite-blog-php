@@ -1,0 +1,9 @@
+            
+            <?php
+                $categories = getCategories();
+                $index = 0;
+                while (($category = mysqli_fetch_assoc($categories)) && $index < 4): 
+                    $index++
+            ?>
+                <li><a href=""><?=$category['name']?></a></li>
+            <?php endwhile; ?>    
